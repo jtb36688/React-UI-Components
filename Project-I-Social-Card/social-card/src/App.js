@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className='Container'>
     <HeaderContainer />
-    <CardContainer />
+    <CardContainer onClick="window.open('http://www.reactjs.org')"/>
     </div>
   );
 };

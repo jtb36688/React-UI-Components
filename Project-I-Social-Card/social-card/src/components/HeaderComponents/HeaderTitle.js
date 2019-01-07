@@ -1,12 +1,14 @@
 import React from 'react';
 import './Header.css';
+import ImageThumbnail from './ImageThumbnail.js';
 
 function HeaderTitle () {
     return (
         <div>
-            <span>Lambda School</span>
-            <span>@Lambdaschool</span>
-            <span>Jan 7</span>
+            <ImageThumbnail />
+            <strong>Lambda School</strong>
+            <span> @Lambdaschool</span>
+            <span> Jan 7</span>
         </div>
     )
 }
