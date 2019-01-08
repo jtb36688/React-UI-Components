@@ -1,4 +1,12 @@
-.displaybox {
+.CalculatorDisplay {
+    width: 454px;
+    height: 124px;
+    border: 1px solid grey;
     background: #202328;
-    color: white;
+    color: grey;
+    font-size: 50px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }

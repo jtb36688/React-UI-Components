@@ -4,7 +4,7 @@ import './Button.css';
 
 function ActionButton(props) {
     return (
-        <button className='OpsButton' onClick={props.onClick}>
+        <button className={props.opclasses} onClick={props.onClick}>
             {props.value}
         </button>
     )

@@ -3,7 +3,7 @@ import './Button.css';
 
 function NumberButton(props) {
     return (
-        <button className='NumberButton' onClick={props.onClick}>
+        <button className={props.numclasses} onClick={props.onClick}>
             {props.value}
         </button>
     )

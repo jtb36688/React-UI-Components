@@ -2,27 +2,28 @@ import React from 'react';
 import './Button.css';
 import ActionButton from './ActionButton.js';
 import NumberButton from './NumberButton.js';
-import CalculatorDisplay from '../DisplayComponents/CalculatorDisplay';
 
 class ButtonContainer extends React.Component {
     renderNumButton(i) {
-        return <NumberButton value={this.props.numbuttons[i]}
-        onClick={() => this.props.onClick(i)} />;
+        return <NumberButton value={this.props.numbers[i]}
+        onClick={() => this.props.NumonClick(i)}
+        numclasses={this.props.numclasses(i)} />;
     }
 
     renderOpsButton(i) {
-        return <ActionButton value={this.props.opsbuttons[i]}
-        onClick={() => this.props.onClick(i)} />;
+        return <ActionButton value= {this.props.operators[i]}
+        opclasses={this.props.opclasses(i)}
+        onClick={() => this.props.OpsonClick(i)} />;
     }
 
     render4Rows = () => {
         let table = [];
-        for (let i = 1; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             let children = [];
-              for (let x = 0; x < 3; x++) {
-                children.push(this.renderNumButton(x+i*3))
-                if (x === 2) {
-                    children.push(this.renderOpsButton(i))
+              for (let x = 1; x < 4; x++) {
+                children.push(this.renderNumButton(x+i*3));
+                if (x === 3) {
+                    children.push(this.renderOpsButton(i));
                 }
               }
             table.unshift(<div className="4-row">{children}</div>);
@@ -53,11 +54,11 @@ class ButtonContainer extends React.Component {
     render() {
         return (
             <div>
-                {this.renderWideRowTop}
+                {this.renderWideRowTop()}
                 {this.render4Rows()}
-                {this.renderWideRowBot}
+                {this.renderWideRowBot()}
             </div>
         )
     }
     }
-export default CalculatorDisplay;
+export default ButtonContainer;
