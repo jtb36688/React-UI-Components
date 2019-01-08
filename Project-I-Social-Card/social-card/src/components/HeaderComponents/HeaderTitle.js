@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import ImageThumbnail from './ImageThumbnail.js';
+import moment from 'moment';
 
 function HeaderTitle () {
     return (
@@ -8,7 +9,7 @@ function HeaderTitle () {
         <ImageThumbnail />
             <strong>Lambda School</strong>
             <span> @Lambdaschool</span>
-            <span> Jan 7</span>
+            {moment().format('MMMM Do YYYY, h:mm:ss a')}
         </div>
     )
 }
