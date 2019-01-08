@@ -3,9 +3,9 @@ import './Card.css';
 import CardBanner from "./CardBanner.js";
 import CardContent from "./CardContent.js";
 
-function CardContainer() {
+function CardContainer(props) {
     return (
-        <div className='CardContainer'>
+        <div onClick={props.onClick} className='CardContainer'>
         <CardBanner />
         <CardContent />
         </div>
