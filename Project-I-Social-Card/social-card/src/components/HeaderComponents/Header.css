@@ -1,1 +1,7 @@
-/* All styles for your header Components live here */
+span {
+    color: grey;
+}
+img{
+    width: 5%;
+    height: auto;
+}

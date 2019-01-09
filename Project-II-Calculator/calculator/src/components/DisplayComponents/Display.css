@@ -1,0 +1,21 @@
+.CalculatorDisplay {
+    width: 454px;
+    height: 124px;
+    border: 1px solid grey;
+    background: #202328;
+    color: grey;
+    font-size: 50px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.Equation {
+    font-size: 25px;
+}
+
+.CalculatorDisplay .HiddenEquation {
+    visibility: hidden;
+}

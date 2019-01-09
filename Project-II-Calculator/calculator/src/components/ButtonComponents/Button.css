@@ -1,0 +1,24 @@
+.NumberButton {
+    border: 1px solid grey;
+    font-size: 20px;
+    width: 113.8px;
+height: 113.5px;
+}
+.WideButton {
+    border: 1px solid grey;
+    font-size: 20px;
+    width: 340.8px;
+height: 113.5px;
+}
+
+.ClearText {
+
+}
+.OpsButton {
+    border: 1px solid grey;
+    background: darkred;
+    color: white;
+    font-size: 20px;
+    width: 113.8px;
+height: 113.5px;
+}
