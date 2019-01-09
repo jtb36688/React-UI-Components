@@ -5,13 +5,13 @@ import NumberButton from './NumberButton.js';
 
 class ButtonContainer extends React.Component {
     renderNumButton(i) {
-        return <NumberButton value={this.props.numbers[i]}
+        return <NumberButton key={this.props.numbers[i]} value={this.props.numbers[i]}
         onClick={() => this.props.NumonClick(i)}
         numclasses={this.props.numclasses(i)} />;
     }
 
     renderOpsButton(i) {
-        return <ActionButton value= {this.props.operators[i]}
+        return <ActionButton key={this.props.operators[i]} value= {this.props.operators[i]}
         opclasses={this.props.opclasses(i)}
         onClick={() => this.props.OpsonClick(i)} />;
     }
@@ -26,7 +26,7 @@ class ButtonContainer extends React.Component {
                     children.push(this.renderOpsButton(i));
                 }
               }
-            table.unshift(<div className="4-row">{children}</div>);
+            table.unshift(<div key={i} className="4-row">{children}</div>);
           }
           return table
         }
